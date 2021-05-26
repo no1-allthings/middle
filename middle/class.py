@@ -51,5 +51,31 @@
 # s.show()
 # s.set_s(100)
 # print(s.get_s())
-#print(s.eng) # 직접 변수에 접근뫃하게 했음
+# print(s.eng) # 직접 변수에 접근뫃하게 했음
 
+class Ppp:
+    def __init__(self):
+        self.name = '란미'
+        self.age = 45
+
+class Kor(Ppp):
+    def say(self):
+        print('안녕')
+
+class Ame(Ppp):
+    def __init__(self):
+        super().__init__()
+        self.lang = '영어'
+    def say(self):
+        print('hello')
+
+pp = Ppp()
+kk = Kor()
+aa = Ame()
+
+print(pp.name)
+print(aa.age)
+print(kk.name, aa.age, )
+
+kk.say()
+aa.say()
